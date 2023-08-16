@@ -5,6 +5,9 @@
 require_once 'config/config.php';
 //Load Libraries
 
+//load helpers
+require_once 'helpers/url_helper.php';
+
 //require_once 'libraries/core.php';
 //require_once 'libraries/controller.php';
 //require_once 'libraries/database.php';

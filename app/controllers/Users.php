@@ -62,7 +62,20 @@
                 //Make sure errors are empty
                 if(empty($data['email_err']) && empty($data['name_err']) && empty($data['password_err']) && empty($data['confirm_password_err'])) {
                     //Validated
-                    die('SUCCESS');
+                    //die('SUCCESS');
+
+                    // Hash Password
+                    $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+
+                    // Register User
+                    if ($this->userModel->register($data)) {
+                        // Reson to use helper file
+                        //header('location:' . URLROOT . '/users/login');
+                        redirect('users/login');
+                    } else  {
+                        die('Something went wrong');
+                    }
+
                 } else {
                     $this->view('users/register', $data);
                 }
