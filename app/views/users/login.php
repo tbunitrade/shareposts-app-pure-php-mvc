@@ -8,14 +8,14 @@
 
                     <div class="form-group mt-3">
                         <label for="email">Email: <sup>*</sup> </label>
-                        <input  type="email" name="email" required placeholder="Email" class="form-control form-control-lg <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['email'];?>">
-                        <span class="invalid-feedback"><?php echo data['email_err'];?></span>
+                        <input  type="email" name="email"  placeholder="Email" class="form-control form-control-lg <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['email'];?>">
+                        <span class="invalid-feedback"><?php echo $data['email_err'];?></span>
                     </div>
 
                     <div class="form-group mt-3">
                         <label for="password">Password: <sup>*</sup> </label>
-                        <input  type="password" name="password" required placeholder="Password" class="form-control form-control-lg <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['password'];?>">
-                        <span class="invalid-feedback"><?php echo data['password_err'];?></span>
+                        <input  type="password" name="password" placeholder="Password" class="form-control form-control-lg <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['password'];?>">
+                        <span class="invalid-feedback"><?php echo $data['password_err'];?></span>
                     </div>
 
                     <div class="row mt-3">
